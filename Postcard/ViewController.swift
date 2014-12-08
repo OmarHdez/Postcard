@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var enterNameTextField: UITextField!
+    @IBOutlet weak var enterTextTextField: UITextField!
+    @IBOutlet weak var mailButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +26,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func sendMailButtonPressed(sender: UIButton) {
+        messageLabel.hidden = false
+        messageLabel.text = enterTextTextField.text
+        messageLabel.textColor = UIColor.redColor()
+        
+        // This is to delete Text from TextFild. 
+        enterTextTextField.text = ""
+        // This is to hide the keybord from the active view.
+        enterTextTextField.resignFirstResponder()
+        // This is to rename the text in the button, wehave to set it to NORMAL.
+        mailButton.setTitle("Mail sent", forState: UIControlState.Normal)
+        
+    }
+    
 
 }
 
