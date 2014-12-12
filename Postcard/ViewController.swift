@@ -30,12 +30,12 @@ class ViewController: UIViewController {
         messageLabel.hidden = false
         messageLabel.text = enterTextTextField.text
         messageLabel.textColor = UIColor.redColor()
-        
+        // Omar test
         // This is to delete Text from TextFild. 
         enterTextTextField.text = ""
         // This is to hide the keybord from the active view.
         enterTextTextField.resignFirstResponder()
-        // This is to rename the text in the button, wehave to set it to NORMAL.
+        // This is to rename the text in the button, we have to set it to NORMAL.
         mailButton.setTitle("Mail sent", forState: UIControlState.Normal)
         
     }
